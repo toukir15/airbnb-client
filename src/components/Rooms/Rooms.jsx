@@ -1,17 +1,22 @@
 import { useContext } from "react";
-import Container from "../Shared/Container";
 import Card from "./Card";
+import CardLoading from "../Loading/CardLoading";
+
 import { CategoryContext } from "../../Providers/CategoryProvider";
+import Container from "../Shared/Navbar/Container";
 
 export default function Rooms() {
-  const { rooms } = useContext(CategoryContext);
+  const { rooms, roomsDataLoading, allDataLoading, searchLoading } =
+    useContext(CategoryContext);
+
+  console.log(roomsDataLoading, allDataLoading, searchLoading);
 
   return (
     <Container>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
-        {rooms.map((room, index) => (
-          <Card room={room} key={index} />
-        ))}
+        {roomsDataLoading || allDataLoading || searchLoading
+          ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => <CardLoading key={i} />)
+          : rooms.map((room, index) => <Card room={room} key={index} />)}
       </div>
     </Container>
   );

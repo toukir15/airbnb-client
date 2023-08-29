@@ -4,69 +4,278 @@
         "image": "https://a0.muscache.com/im/pictures/4f70b681-a792-4530-8c52-f2a8d262942d.jpg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 456,
-        "category": "Beach"
+        "category": "Beach",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
     },
     {
         "location": "Abiansemal, Bali",
         "image": "https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 513,
-        "category": "Windmills"
+        "category": "Windmills",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "apartment",
+            "hotel"
+        ]
     },
     {
         "location": "Kecamatan Ubud, Bali",
         "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-46761225/original/11058c0d-fac8-4035-8f16-8b3abe7441cd.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 456,
-        "category": "Modern"
+        "category": "Modern",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house"
+        ]
     },
     {
         "location": "Koh samui, Thailand",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-820950793239599563/original/d5c1f686-f06a-4b65-9f55-32e19dc0b23f.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 513,
-        "category": "Countryside"
+        "category": "Countryside",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "guesthouse",
+            "hotel"
+        ]
     },
     {
         "location": "Surat Thani, Thailand",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-820954888871612167/original/f37e01a9-cb1a-446d-be7e-c1d62d1f1c23.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 456,
-        "category": "Windmills"
+        "category": "Windmills",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "apartment"
+        ]
     },
     {
         "location": "Khao Lak, Thailand",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-826025597172937112/original/d6bbe2ca-9337-4a7e-a5d3-ca8fe72821db.jpeg?im_w=1200",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 345,
-        "category": "Windmills"
+        "category": "Windmills",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "guesthouse"
+        ]
     },
     {
         "location": "Kecamatan Selemadeg, Bali",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-807995199727408777/original/3ba641e8-f9be-41cb-b834-aba9695726fa.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 513,
-        "category": "Beach"
+        "category": "Beach",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "hotel"
+        ]
     },
     {
         "location": "Khao Lak, Thailand",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-826732383054098647/original/457337ee-af64-462f-90d0-b9fa1ce98a73.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 213,
-        "category": "Windmills"
+        "category": "Windmills",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "apartment",
+            "guesthouse",
+            "hotel"
+        ]
     },
     {
         "location": "Khao Lak, Thailand",
         "image": "https://a0.muscache.com/im/pictures/miso/Hosting-826726918494647682/original/d1586407-7873-4c15-91e2-61ab713d2aca.jpeg",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 213,
-        "category": "Windmills"
+        "category": "Windmills",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "apartment",
+            "guesthouse",
+            "hotel"
+        ]
     },
     {
-        "location": "Kecamatan Ubud, Bali",
-        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-812919482265584093/original/c60bc2f2-7d16-4f7d-acf2-44c2f855fb81.jpeg",
+        "location": "Tambon Phaya Yen, Thailand",
+        "image": "https://a0.muscache.com/im/pictures/a71562ca-bb0e-425d-b33f-e397617159e8.jpg?im_w=720",
         "dateRange": "Jan 9, 2024 - Jan 14, 2024",
         "price": 213,
-        "category": "Pools"
+        "category": "Pools",
+        "bedrooms": 1,
+        "beds": 2,
+        "bathrooms": 1,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Tambon Cha-am,  Thailand",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-819847440002784996/original/893aa3d8-0bbb-452a-9788-a07de6ac05e6.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 113,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 2,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Khet Watthana, Thailand",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-616470083732125587/original/f13ad82b-ef72-4e51-ab63-6af69d93b253.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 3,
+        "beds": 6,
+        "bathrooms": 3,
+        "property_types": [
+            "hotel"
+        ]
+    },
+    {
+        "location": "Chiang Dao, Thailand",
+        "image": "https://a0.muscache.com/im/pictures/f5681f00-d666-4e43-93cf-64b02491f4e3.jpg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Ban Sa Ha Khon, Thailand",
+        "image": "https://a0.muscache.com/im/pictures/bf4781b0-2369-4897-aac1-c7d3f335abe7.jpg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Kochi, India",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-824274983452380073/original/ded7d0e5-9acd-4e36-9b5d-dacc397e3c82.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Gushaini, India",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-835139253873503424/original/a6694f43-0464-46a1-9cc7-8bf39b141bb1.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Murbad, India",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-661201204231662812/original/dcf104b4-9609-4018-a71d-2bc61874304c.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Roches Noires, Mauritius",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-736194760184993424/original/adfd6818-0614-437a-a032-2c9eff1cbd9e.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "Pererenan, Kec. Mengw, Bali, Indonesia",
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-920300822276616400/original/37588450-35ef-4732-abd1-511b9a5ca4ae.jpeg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
+    },
+    {
+        "location": "T. Bophut, Chaweng Noi, ThailandBali",
+        "image": "https://a0.muscache.com/im/pictures/7fd995eb-b829-4356-9d0a-2da308e7d483.jpg?im_w=720",
+        "dateRange": "Jan 9, 2024 - Jan 14, 2024",
+        "price": 213,
+        "category": "Pools",
+        "bedrooms": 2,
+        "beds": 4,
+        "bathrooms": 2,
+        "property_types": [
+            "house",
+            "hotel"
+        ]
     }
 ]

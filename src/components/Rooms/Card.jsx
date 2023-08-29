@@ -1,6 +1,8 @@
 import HeartButton from "../Buttons/HeartButton";
 
-const Card = () => {
+const Card = ({ room }) => {
+  // console.log(room);
+  const { location, image, dateRange, price } = room || {};
   return (
     <div className="col-span-1 cursor-pointer group">
       <div className="flex flex-col gap-2 w-full">
@@ -21,7 +23,7 @@ const Card = () => {
               group-hover:scale-110 
               transition
             "
-            src="https://a0.muscache.com/im/pictures/4f70b681-a792-4530-8c52-f2a8d262942d.jpg"
+            src={image}
             alt="Room"
           />
           <div
@@ -34,12 +36,10 @@ const Card = () => {
             <HeartButton />
           </div>
         </div>
-        <div className="font-semibold text-lg">Sidemen, Indonesia</div>
-        <div className="font-light text-neutral-500">
-          5 nights . June 19 - 26
-        </div>
+        <div className="font-semibold text-lg">{location}</div>
+        <div className="font-light text-neutral-500">{dateRange}</div>
         <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold">$ 200</div>
+          <div className="font-semibold">$ {price}</div>
           <div className="font-light">night</div>
         </div>
       </div>
