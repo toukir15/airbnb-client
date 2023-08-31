@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Card from "./Card";
 import CardLoading from "../Loading/CardLoading";
 
@@ -8,8 +8,13 @@ import Container from "../Shared/Navbar/Container";
 export default function Rooms() {
   const { rooms, roomsDataLoading, allDataLoading, searchLoading } =
     useContext(CategoryContext);
+  const [roomsData, setRoomsData] = useState([]);
 
-  console.log(roomsDataLoading, allDataLoading, searchLoading);
+  useEffect(() => {
+    fetch(`rooms.json`)
+      .then((res) => res.json())
+      .then((data) => setRoomsData(data));
+  }, []);
 
   return (
     <Container>
@@ -17,6 +22,9 @@ export default function Rooms() {
         {roomsDataLoading || allDataLoading || searchLoading
           ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => <CardLoading key={i} />)
           : rooms.map((room, index) => <Card room={room} key={index} />)}
+        {/* {roomsData.map((room, index) => (
+          <Card room={room} key={index} />
+        ))} */}
       </div>
     </Container>
   );

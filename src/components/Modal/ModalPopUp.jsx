@@ -4,10 +4,11 @@ import PriceRange from "../Filters/PriceRange";
 import PropertyType from "../Filters/PropertyType";
 import RoomsAndBeds from "../Filters/Rooms&Beds/Rooms&Beds";
 import { CategoryContext } from "../../Providers/CategoryProvider";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function ModalPopUp({ closeModal }) {
-  const { handleFilter, filterLiveQuantity } = useContext(CategoryContext);
+  const { handleFilter, filterLiveQuantity, clearAll } =
+    useContext(CategoryContext);
 
   // handle filter functor
   const filterFN = (e) => {
@@ -25,11 +26,11 @@ export default function ModalPopUp({ closeModal }) {
         <div className="bg-white rounded-xl w-[55%] h-[90%] border-2  overflow-hidden relative z-50">
           {/* modal harder  */}
           <div className="flex items-center border-b-2 py-2 px-2">
-            <button>
-              <AiOutlineCloseCircle
+            <button className="p-2 hover:bg-slate-100 rounded-full">
+              <AiOutlineClose
                 onClick={closeModal}
                 id="modal"
-                className="text-3xl text-slate-500"
+                className="text-lg text-slate-500"
               />
             </button>
             <div className="w-full">
@@ -60,7 +61,10 @@ export default function ModalPopUp({ closeModal }) {
 
           {/* modal bottom  */}
           <div className="flex justify-between items-center py-3  border-t px-4">
-            <div className="font-medium underline cursor-pointer">
+            <div
+              onClick={clearAll}
+              className="font-medium underline cursor-pointer"
+            >
               Clear all
             </div>
             <button

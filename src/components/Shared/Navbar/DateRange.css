@@ -1,0 +1,25 @@
+.MuiPopper-root {
+  padding: 20px 0;
+  width: 800px;
+}
+.MuiPickersPopper-root {
+  background-color: white;
+  padding-bottom: 0;
+}
+.MuiStack-root {
+  padding: 0 10px;
+  padding-bottom: 4px;
+}
+.MuiButtonBase-root {
+  background-color: black;
+}
+.MuiButtonBase-root:hover {
+  background-color: black;
+}
+
+.css-jef1b6-MuiDateRangeCalendar-container {
+  width: 50%;
+}
+/* .MuiButtonBase-root {
+  background-color: black;
+} */

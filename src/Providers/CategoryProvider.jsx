@@ -9,12 +9,21 @@ export const CategoryProvider = ({ children }) => {
   const [searchKeyword, setSearchKeyword] = useState("");
 
   const {
+    typeOfPlace,
     propertyType,
     bathroomsQuantity,
     bedsQuantity,
     bedroomsQuantity,
     minPrice,
     maxPrice,
+    region,
+
+    // guest counter
+    adultCounter,
+    childrenCounter,
+    infantsCounter,
+    petsCounter,
+    selectedDateRange,
   } = useContext(FilterContext);
 
   // filter quantity
@@ -57,16 +66,20 @@ export const CategoryProvider = ({ children }) => {
 
   // search api
   const [searchLoading, setSearchLoading] = useState(false);
-  useEffect(() => {
-    setSearchLoading(true);
-    let url = `https://airbnbserver.vercel.app/rooms/${category}`;
 
-    if (searchKeyword) {
-      console.log(
-        `https://airbnbserver.vercel.app/search/${category}?search_keyword=${searchKeyword}`
-      );
+  const handleSearch = () => {
+    setSearchLoading(true);
+    let url = `http://localhost:5000/rooms/${category}`;
+
+    if (
+      region ||
+      adultCounter ||
+      childrenCounter ||
+      infantsCounter ||
+      petsCounter
+    ) {
       fetch(
-        `https://airbnbserver.vercel.app/search/${category}?search_keyword=${searchKeyword}`
+        `http://localhost:5000/search/${category}?search_keyword=${region}&adult=${adultCounter}&children=${childrenCounter}&infants=${infantsCounter}&pets=${petsCounter}&date=${`${selectedDateRange[0]?.$d},${selectedDateRange[1]?.$d}`}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -83,7 +96,7 @@ export const CategoryProvider = ({ children }) => {
         })
         .catch(() => setSearchLoading(false));
     }
-  }, [category, searchKeyword]);
+  };
 
   const propertyTypeString = propertyType.join(",");
 
@@ -91,7 +104,7 @@ export const CategoryProvider = ({ children }) => {
   const [allDataLoading, setAllDataLoading] = useState(false);
   useEffect(() => {
     setAllDataLoading(true);
-    fetch(`https://airbnbserver.vercel.app/rooms/${category}`)
+    fetch(`http://localhost:5000/rooms/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setRooms(data);
@@ -104,7 +117,7 @@ export const CategoryProvider = ({ children }) => {
   const [roomsDataLoading, setRoomsDataLoading] = useState(false);
   const handleFilter = () => {
     setRoomsDataLoading(true);
-    let url = `https://airbnbserver.vercel.app/rooms/${category}`;
+    let url = `http://localhost:5000/rooms/${category}`;
 
     if (
       propertyType.length > 0 ||
@@ -114,7 +127,7 @@ export const CategoryProvider = ({ children }) => {
       minPrice ||
       maxPrice
     ) {
-      url = `https://airbnbserver.vercel.app/rooms/${category}?bedrooms=${bedroomsQuantity}&beds=${bedsQuantity}&bathrooms=${bathroomsQuantity}&property_type=${propertyTypeString}&minPrice=${minPrice}&maxPrice=${maxPrice}`;
+      url = `http://localhost:5000/rooms/${category}?bedrooms=${bedroomsQuantity}&beds=${bedsQuantity}&bathrooms=${bathroomsQuantity}&property_type=${propertyTypeString}&minPrice=${minPrice}&maxPrice=${maxPrice}`;
     }
     fetch(url)
       .then((res) => res.json())
@@ -128,7 +141,7 @@ export const CategoryProvider = ({ children }) => {
   // set live time filter product quantity
   const [filterLiveQuantity, setFilterLiveQuantity] = useState(0);
   useEffect(() => {
-    let url = `https://airbnbserver.vercel.app/filter/${category}`;
+    let url = `http://localhost:5000/filter/${category}`;
 
     if (
       propertyType.length > 0 ||
@@ -138,7 +151,7 @@ export const CategoryProvider = ({ children }) => {
       minPrice ||
       maxPrice
     ) {
-      url = `https://airbnbserver.vercel.app/filter/${category}?bedrooms=${bedroomsQuantity}&beds=${bedsQuantity}&bathrooms=${bathroomsQuantity}&property_type=${propertyTypeString}&minPrice=${minPrice}&maxPrice=${maxPrice}`;
+      url = `http://localhost:5000/filter/${category}?bedrooms=${bedroomsQuantity}&beds=${bedsQuantity}&bathrooms=${bathroomsQuantity}&property_type=${propertyTypeString}&minPrice=${minPrice}&maxPrice=${maxPrice}&type_of_place=${typeOfPlace}`;
 
       fetch(url)
         .then((res) => res.json())
@@ -155,6 +168,7 @@ export const CategoryProvider = ({ children }) => {
     minPrice,
     maxPrice,
     propertyType,
+    typeOfPlace,
   ]);
 
   // rooms info
@@ -168,6 +182,7 @@ export const CategoryProvider = ({ children }) => {
     roomsDataLoading,
     allDataLoading,
     searchLoading,
+    handleSearch,
   };
 
   return (

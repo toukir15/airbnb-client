@@ -1,0 +1,53 @@
+/* ImageSlider.css */
+
+/* Change the color and size of the navigation buttons */
+/* Add a transition to the properties that change on hover */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 12px !important;
+  font-weight: bolder;
+  width: 35px !important;
+  height: 27px !important;
+  line-height: 1 !important;
+  background-color: white;
+  border-radius: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Display the buttons when the parent (.slide-btn) is hovered */
+.slide-btn:hover .swiper-button-prev::after {
+  display: flex;
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+.slide-btn:hover .swiper-button-next::after {
+  display: flex;
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+/* Change the color of the navigation buttons */
+.swiper-button-prev::after {
+  color: black !important;
+}
+
+.swiper-button-next::after {
+  color: black !important;
+}
+
+/* Change the color of the pagination dots */
+.mySwiper .swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Change the color of the active pagination dot */
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: black !important;
+  opacity: 1;
+}

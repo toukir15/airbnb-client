@@ -1,10 +1,10 @@
 import HeartButton from "../Buttons/HeartButton";
+import ImageSlider from "./ImageSlider";
 
 const Card = ({ room }) => {
-  // console.log(room);
   const { location, image, dateRange, price } = room || {};
   return (
-    <div className="col-span-1 cursor-pointer group">
+    <div className="col-span-1 cursor-pointer group slide-btn">
       <div className="flex flex-col gap-2 w-full">
         <div
           className="
@@ -15,7 +15,7 @@ const Card = ({ room }) => {
             rounded-xl
           "
         >
-          <img
+          {/* <img
             className="
               object-cover 
               h-full 
@@ -25,16 +25,28 @@ const Card = ({ room }) => {
             "
             src={image}
             alt="Room"
-          />
+          /> */}
+
           <div
+            className="
+              object-cover 
+              h-full 
+              w-full 
+              transition
+            "
+          >
+            <ImageSlider image={image} />
+          </div>
+          {/* <div
             className="
             absolute
             top-3
             right-3
+            z-20
           "
           >
             <HeartButton />
-          </div>
+          </div> */}
         </div>
         <div className="font-semibold text-lg">{location}</div>
         <div className="font-light text-neutral-500">{dateRange}</div>

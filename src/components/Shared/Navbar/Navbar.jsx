@@ -1,12 +1,12 @@
 // import Container from "../../Container";
 import { useContext } from "react";
-import Container from "../../Shared/Navbar/Container";
 import Logo from "./Logo";
 import MenuDropdown from "./MenuDropdown";
 import Search from "./Search";
 import { GlobalContext } from "../../../Providers/GlobalProvider";
 import ToggleSearch from "./ToggleSearch";
 import ToggleSearchRoute from "./ToggleSearchRoute";
+import Container from "./Container";
 
 export default function Navbar() {
   const { isToggleSearch } = useContext(GlobalContext);
@@ -24,6 +24,11 @@ export default function Navbar() {
           {/* toggle search  */}
           <ToggleSearch />
         </Container>
+
+        {/* background blur  */}
+        {isToggleSearch && (
+          <div className="w-full h-[100vh] bg-[#33333371]"></div>
+        )}
       </div>
     </div>
   );
